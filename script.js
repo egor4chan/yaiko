@@ -1,6 +1,8 @@
 var health = 10;
 var shop_btn = document.getElementById('shopbtn');
 
+let tg = window.Telegram.WebApp
+
 function randint(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand)
@@ -16,7 +18,7 @@ function win() {
     egg.onclick = 'cont()';
   
     shop_btn.style = 'opacity: 1;';
-    egg.src = 'success.PNG';
+    egg.src = 'static/success.PNG';
     label.innerHTML = String(randint(5, 50) / 100) + ' TON'
     prelabel.innerHTML = 'О да, в яйке оказалась бабло! Получяй бесплатные яйки за приглашения.';
     }
@@ -28,7 +30,7 @@ function cont() {
     let prelabel = document.getElementById('prelabel');
 
     egg.className == 'success'
-    egg.src = 'egg.PNG';
+    egg.src = 'static/egg.PNG';
     label.innerHTML = 'Яйко нищеты'
     prelabel.innerHTML = 'Тибе врятли чота выпадет с бесплатного яйка такчто купи богатае не позорся.'
 
